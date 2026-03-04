@@ -1,7 +1,7 @@
-# Tomatextor-Ruby
+# Tomatextor
 > **Versão:** `v1.0.0`
 
-CLI em Ruby para transcrição automática de arquivos de áudio utilizando o **whisper.cpp** (motor nativo compilado com CUDA). Sucessor espiritual do Tomatextor Python, redesenhado para ser mais robusto, padronizado e extensível.
+CLI em Ruby para transcrição automática de arquivos de áudio utilizando o **whisper.cpp** (motor nativo compilado com CUDA). Implementação oficial e definitiva, substituindo a versão legada em Python.
 
 ## Funcionalidades
 
@@ -41,8 +41,8 @@ yay -S ruby ffmpeg cuda cmake gcc
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/abobrinhadigital/tomatextor-ruby.git
-cd tomatextor-ruby
+git clone https://github.com/abobrinhadigital/tomatextor.git
+cd tomatextor
 ```
 
 ### 2. Instale as gems Ruby
