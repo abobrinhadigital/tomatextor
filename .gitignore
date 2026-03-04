@@ -1,0 +1,27 @@
+# Ambiente e segredos
+.env
+
+# Modelos GGML (pesados demais para versionar)
+models/
+
+# Áudios e transcrições (conteúdo pessoal)
+audios/novos/*
+audios/processados/*
+transcricoes/novas/*
+transcricoes/processados/*
+
+# Motor nativo (código-fonte baixado e compilado localmente — veja o README)
+vendor/
+
+# Ruby
+.bundle/
+*.gem
+*.rbc
+/.config
+
+# Logs e temporários
+*.log
+/tmp/
+
+# Sistema
+.DS_Store

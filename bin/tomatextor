@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require_relative '../lib/tomatextor'
+
+begin
+  Tomatextor::CLI.start(ARGV)
+rescue Interrupt
+  puts "\nInterrompido pelo usuário. Saindo..."
+  exit 1
+rescue StandardError => e
+  puts "\n[ERRO CRÍTICO MURPHYANO]: #{e.message}"
+  exit 1
+end
