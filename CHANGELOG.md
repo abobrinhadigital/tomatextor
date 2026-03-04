@@ -5,10 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-03-04
+
+- Removida limitação chata de 80 caracteres de tradução (flag `--max-len`) do motor do Whisper, deixando o sistema fatiar os blocos pela pontuação real do texto.
+- Adicionado regex no pós-processamento Ruby para garantir quebra de parágrafo apenas no final de sentenças (., ! ou ?).
+- Removido log `--print-progress` verboso no `whisper-cli` para que o terminal fique limpo durante processamentos grandes.
+- Removida flag de `--max-context` zero. Deixando os algoritmos mais potentes trabalharem.
+
 ## [1.0.0] - 2026-03-04
 
 - Inicialização da estrutura básica do projeto em Ruby com gerenciamento via Bundler.
-- Classe `Tomatextor::Config` para gestão de variáveis de ambiente e diretórios.
 - Classe `Tomatextor::ModelManager` para download e validação de modelos GGML.
 - Classe `Tomatextor::FileManager` para conversão de áudio via FFmpeg e gestão de arquivos.
 - Classe `Tomatextor::Transcriber` integrada com a gem `whispercpp` (suporte a `initial_prompt`).

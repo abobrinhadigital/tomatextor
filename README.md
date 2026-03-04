@@ -1,5 +1,5 @@
 # Tomatextor
-> **Versão:** `v1.0.0`
+> **Versão:** `v1.1.0`
 
 CLI em Ruby para transcrição automática de arquivos de áudio utilizando o **whisper.cpp** (motor nativo compilado com CUDA). Implementação oficial e definitiva, substituindo a versão legada em Python.
 

@@ -27,11 +27,9 @@ module Tomatextor
         "--language",       "pt",
         "--output-txt",
         "--no-timestamps",
-        "--print-progress",
         "--max-context",    "0",       # Evita delírios por contexto acumulado (= no-context)
         "--flash-attn",                # Flash Attention: menos alucinação em áudios longos
         "--entropy-thold",  "2.8",    # Corta segmentos incertos antes de alucinar
-        "--max-len",        "80",      # Quebra de linha a cada ~80 chars
         "--file",           audio_wav_path
       ]
 
@@ -59,7 +57,9 @@ module Tomatextor
       # O whisper-cli salva em <audio>.txt automaticamente quando --output-txt é usado
       txt_path = "#{audio_wav_path}.txt"
       if File.exist?(txt_path)
+        # Lê o arquivo e usa regex para quebrar linha onde há pontuação
         result = File.read(txt_path).strip
+        result = result.gsub(/([.?!])\s+/, "\\1\n\n")
         File.delete(txt_path)
         result
       else
